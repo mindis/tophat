@@ -19,7 +19,7 @@ def sample_uniform(n_items: int, batch_size: int = 1, n_neg: int = 1):
         Array with shape [batch_size] of random items as negatives
 
     """
-    return np.random.randint(n_items, size=[batch_size, n_neg], dtype=np.uint32).flatten()
+    return np.random.randint(n_items, size=[batch_size, n_neg], dtype=np.uint32).squeeze()
 
 
 def sample_uniform_verified(
@@ -52,7 +52,7 @@ def sample_uniform_verified(
         neg_inds = neg_samp_bsearch(user_pos_item_inds, n_items, n_neg)
         neg_item_inds_batch[i] = neg_inds
 
-    return neg_item_inds_batch.flatten()
+    return neg_item_inds_batch.squeeze()
 
 
 def sample_uniform_ordinal(
@@ -84,4 +84,4 @@ def sample_uniform_ordinal(
         neg_inds = neg_samp_bsearch(user_pos_item_inds, n_items, n_neg)
         neg_item_inds_batch[i] = neg_inds
 
-    return neg_item_inds_batch.flatten()
+    return neg_item_inds_batch.squeeze()
