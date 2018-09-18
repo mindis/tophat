@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def neg_samp_bsearch(pos_inds, n_items, n_samp=32):
+def neg_samp_bsearch(pos_inds: np.array, n_items: int, n_samp: int = 32):
     """ Pre-verified with binary search
     `pos_inds` is assumed to be ordered
 
