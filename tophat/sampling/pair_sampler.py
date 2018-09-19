@@ -454,7 +454,6 @@ class PairSampler(object):
                         user_inds_batch=user_inds_batch,
                         pos_item_inds_batch=pos_item_inds_batch,
                     )
-                    import pdb; pdb.set_trace()
                     misc_feed_d = None
 
                 user_feed_d = self.user_feed_via_inds(user_inds_batch)
