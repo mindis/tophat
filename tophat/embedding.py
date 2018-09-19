@@ -271,7 +271,6 @@ def lookup_wrapper(emb_d: Dict[str, tf.Tensor],
         # Aggregate if multiple samples per observation
         for feat_name, tensor in looked_up.items():
             if len(tensor.get_shape()) == 3:
-                print(feat_name, tensor.get_shape())
                 looked_up[feat_name] = agg_fn(looked_up[feat_name], axis=0)
 
     return looked_up
