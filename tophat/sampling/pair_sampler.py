@@ -142,7 +142,7 @@ class PairSampler(object):
                  use_ds_iter: bool = True,
                  seed: int = 0,
                  non_negs_df: Optional[pd.DataFrame] = None,
-                 n_neg: int = 5,
+                 n_neg: int = 1,
                  ):
 
         self.rand = np.random.RandomState(seed)
