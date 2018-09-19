@@ -115,6 +115,7 @@ class PairSampler(object):
         seed: Seed for random state
         non_negs_df: Additional interactions that are safeguarded from being
             sampled as negatives. But they will not be chosen as positives.
+        n_neg: number of negatives to sample per positive
 
     Terminology:
 
