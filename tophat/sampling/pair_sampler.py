@@ -135,7 +135,7 @@ class PairSampler(object):
                  batch_size: int = 1024,
                  shuffle: bool = True,
                  n_epochs: int = -1,
-                 uniform_users: bool = True,
+                 uniform_users: bool = False,
                  method: str = 'uniform',
                  model=None,
                  sess: tf.Session = None,
