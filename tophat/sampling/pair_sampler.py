@@ -446,22 +446,6 @@ class PairSampler(object):
             inds_batcher = batcher(self.shuffle_inds, n=self.batch_size)
             # inds are either on interaction or user level
             for inds_batch in inds_batcher:
-<<<<<<< HEAD
-=======
-                user_inds_batch = self.pos_xn_coo.row[inds_batch]
-                pos_item_inds_batch = self.pos_xn_coo.col[inds_batch]
-                if self.method == 'adaptive_warp':
-                    neg_item_inds_batch, first_violator_inds = self.get_negs(
-                        user_inds_batch=user_inds_batch,
-                        pos_item_inds_batch=pos_item_inds_batch,)
-                    misc_feed_d = {'first_violator_inds': first_violator_inds}
-                else:
-                    neg_item_inds_batch = self.get_negs(
-                        user_inds_batch=user_inds_batch,
-                        pos_item_inds_batch=pos_item_inds_batch,
-                    )
-                    misc_feed_d = None
->>>>>>> 078d82a5a464890a3d1169e04bd15a9b47e8569a
 
                 if self.uniform_users:
                     user_inds_batch = inds_batch
